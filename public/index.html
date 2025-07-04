@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html data-theme="bumblebee">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+    <label class="swap swap-rotate">
+        <!-- this hidden checkbox controls the state -->
+        <input type="checkbox" class="theme-controller" value="synthwave" />
+        <!-- sun icon -->
+        <svg class="swap-off h-10 w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+                d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+        </svg>
+
+        <!-- moon icon -->
+        <svg class="swap-on h-10 w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+                d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+        </svg>
+    </label>
+    <!-- title -->
+    <div class=" border-4 h-full border-double rounded-xl inset-ring-2 shadow-xl/30  ml-70  w-3/5 pb-10 ...">
+        <div class=" ml-70  mt-10 w-full max-w-80 ...">
+            <p class="text-2xl text-shadow-2xs ...">PLACIBO STUDENT FORM</p>
+        </div>
+        <!-- name and email-->
+        <div class=" mt-10 w-150 ml-28 flex flex-row flex justify-between">
+            <div class="">
+                <label>Full Name</label>
+                <label class="input input-primary validator">
+                    <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
+                            stroke="currentColor">
+                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </g>
+                    </svg>
+                    <input type="text" required placeholder="Username" pattern="[A-Za-z][A-Za-z0-9\-]*" minlength="3"
+                        maxlength="30" title="Only letters, numbers or dash" />
+                </label>
+                <p class="validator-hint">
+                    Must be 3 to 30 characters
+                    <br />containing only letters, numbers or dash
+                </p>
+            </div>
+            <div class="">
+                <label>Email id</label>
+                <label class="input validator input-primary">
+                    <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
+                            stroke="currentColor">
+                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </g>
+                    </svg>
+                    <input type="email" placeholder="mail@site.com" required />
+                </label>
+                <div class="validator-hint hidden">Enter valid email address</div>
+            </div>
+        </div>
+        <!-- mobile and profile picture-->
+        <div class="  w-150 ml-28 flex flex-row flex  justify-between ...">
+            <div>
+                <label>phone number</label>
+                <label class="input validator input-primary">
+                    <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                        <g fill="none">
+                            <path
+                                d="M7.25 11.5C6.83579 11.5 6.5 11.8358 6.5 12.25C6.5 12.6642 6.83579 13 7.25 13H8.75C9.16421 13 9.5 12.6642 9.5 12.25C9.5 11.8358 9.16421 11.5 8.75 11.5H7.25Z"
+                                fill="currentColor"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M6 1C4.61929 1 3.5 2.11929 3.5 3.5V12.5C3.5 13.8807 4.61929 15 6 15H10C11.3807 15 12.5 13.8807 12.5 12.5V3.5C12.5 2.11929 11.3807 1 10 1H6ZM10 2.5H9.5V3C9.5 3.27614 9.27614 3.5 9 3.5H7C6.72386 3.5 6.5 3.27614 6.5 3V2.5H6C5.44771 2.5 5 2.94772 5 3.5V12.5C5 13.0523 5.44772 13.5 6 13.5H10C10.5523 13.5 11 13.0523 11 12.5V3.5C11 2.94772 10.5523 2.5 10 2.5Z"
+                                fill="currentColor"></path>
+                        </g>
+                    </svg>
+
+                    <input type="tel" class="tabular-nums w-32" required placeholder="Phone" pattern="[0-9]*" minlength="10"
+                        maxlength="10" title="Must be 10 digits" />
+                </label>
+                <p class="validator-hint">Must be 10 digits</p>
+            </div>
+            <div class=""><label>Profile picture</label>
+                <fieldset class="fieldset">
+                    <input type="file" class="file-input input-primary" />
+                </fieldset>
+            </div>
+        </div>
+        <!-- college-->
+        <div class="mt-5 ml-28">
+           <div> <label >College name</label></div>
+            <fieldset class="fieldset">
+                <input type="text" class="input w-150  input-primary" placeholder="Type here" />
+            </fieldset>
+        </div>
+        <!-- cgpa and course-->
+        <div class="mt-5 w-150 ml-28 flex flex-row flex  justify-between ">
+            <div class="">
+                <div> <label>Cgpa</label></div>
+                <div>
+                    <input type="number  " class="input validator input-primary " required min="1.0" max="10.0"
+                        title="Must be between be 1.0 to 10.0" />
+                    <p class="validator-hint">Must be between be 1.0 to 10.0</p>
+                </div>
+            </div>
+            <div>
+                <fieldset class="fieldset ">
+                    <label>Enrolled course</label>
+                    <select class="select w-95 select-primary">
+                        <option disabled selected>select a course</option>
+                        <option>UI/UX</option>
+                        <option>Node js</option>
+                        <option>Devops</option>
+                        <option>Django</option>
+                        <option>Gen Ai</option>
+                    </select>
+                </fieldset>
+            </div>
+        </div>
+        <!-- experience title-->
+        <div class="ml-28 w-150">
+            <label >Experience Title</label>
+            <fieldset class="fieldset">
+                <input type="text" class="input w-150  input-primary" placeholder="Type here" />
+            </fieldset>
+        </div>
+        <!-- experience description -->
+        <div class="mt-5 ml-28 w-150">
+            <div > <label>Experience description</label></div>
+            <textarea class="textarea input  h-10 w-150 textarea-primary "></textarea>
+        </div>
+        <!-- project title and link -->
+        <div class="mt-5 w-150 ml-28 flex  justify-between ">
+            <div>
+                <div>
+                    <label>project title</label>
+                </div>
+                <input type="text" placeholder="Type here" class="input w-2xs input-primary " />
+            </div>
+            <div>
+                <div><label>project link</label></div>
+                <input type="text" placeholder="Type here" class="input w-2xs input-primary " />
+            </div>
+        </div>
+        <!-- skills -->
+        <div class="mt-5 ml-28 w-150">
+            <label >Skills(comma separated)</label>
+            <div><input type="text" placeholder="Type here" class="input  w-150  input-primary" /></div>
+        </div>
+        <!-- skills -->
+        <div class=" mt-10 ml-70   w-full...">
+            <p class="text-2xl ...">WEEKLY VIDEO UPLOAD</p>
+        </div>
+        <!-- main video -->
+         <div class="w-150 ml-28 mt-10 flex flex-row flex justify-between">
+        <div >
+            <label >Main video</label>
+            <fieldset class="fieldset">
+                <input type="file" class="file-input  w-2xs  input-primary" />
+            </fieldset>
+        </div>
+        <!-- snippet video -->
+        <div >
+            <label >snippet video</label>
+            <fieldset class="fieldset">
+                <input type="file" class="file-input  w-2xs  input-primary" />
+            </fieldset>
+        </div></div>
+        <div class=" mt-10 ml-83   w-full...">
+            <p class="text-2xl ...">SOCIAL LINKS</p>
+        </div>
+        <!-- linked in-->
+        <div class="mt-10 ml-28 w-150"><div><label>Linkedin profile</label></div> <label
+            class="input w-150 input-primary">
+            <span class="label">https://</span>
+            <input type="text" placeholder="URL" />
+        </label></div>
+        <!-- github url-->
+        <div class="mt-5 w-150 ml-28"><div><label>Github Profile</label></div> <label
+            class="input w-150 input-primary">
+            <span class="label">https://</span>
+            <input type="text" placeholder="URL" />
+        </label></div>
+        <!-- Portfolio website-->
+        <div class="mt-5 w-150 ml-28">
+            <div><label>Portfolio Website</label></div>
+            <label class="input w-150  input-primary">
+                <input type="text" placeholder="domain name" />
+                <span class="label">.com</span>
+            </label>
+        </div>
+        <div class="mt-10  ml-85">
+            <button class="btn btn-secondary">Save changes</button>
+        </div>
+        <div>
+             
+        </div>
+    </div>
+
+</body>
+
+</html>
